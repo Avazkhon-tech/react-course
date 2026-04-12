@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>task 3g</title>
+</head>
+<body>
+<div class="js-container"></div>
+
+<script src="https://unpkg.com/supersimpledev/react.js"></script>
+<script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+<script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
+
+
+<script src="https://unpkg.com/supersimpledev/babel.js"></script>
+<script type="text/babel">
+
+    function App() {
+
+        const [text, setText] = React.useState('');
+
+
+        function saveText(event) {
+            setText(event.target.value);
+        }
+
+        function reset() {
+            setText('');
+        }
+
+        function example() {
+            setText('Alice');
+        }
+
+        return (
+            <>
+                <input onChange={saveText} value={text} placeholder="Type something..." />
+                <button onClick={reset}>Reset</button>
+                <button onClick={example}>Example</button>
+                <p>Hello {text}</p>
+            </>
+        );
+    }
+
+    const container = document.querySelector('.js-container');
+    ReactDOM.createRoot(container).render(<App />);
+</script>
+</body>
+</html>

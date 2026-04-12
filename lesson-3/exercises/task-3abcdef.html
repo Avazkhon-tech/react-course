@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Counter app</title>
+</head>
+<body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
+
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+
+        function Counter({counter, setCounter}) {
+
+
+            function click() {
+                setCounter(counter + 1)
+                console.log(counter)
+            }
+
+            return (
+                <>
+                    <button onClick={click}>
+                        Clicked {counter} {counter === 1 || counter === 0 ? ' time' : ' times'}
+                    </button>
+                </>
+            )
+        }
+
+
+
+        function App() {
+            const [counter, setCounter] = React.useState(0)
+
+            function resetCounter() {
+                setCounter(0)
+            }
+
+            return (
+                <>
+                    <Counter counter={counter} setCounter={setCounter} />
+                    <Counter counter={counter} setCounter={setCounter} />
+                    <button onClick={resetCounter}>Reset</button>
+                </>
+            )
+        }
+
+        const container = document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(<App />);
+    </script>
+</body>
+</html>
