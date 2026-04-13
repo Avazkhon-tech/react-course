@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Chat bot</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .switch-button-on {
+            margin-top: 20px;
+            background-color: rgb(25, 135, 84);
+            color: white;
+            padding: 12px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .switch-button-off {
+            margin-top: 20px;
+            background-color: red;
+            color: white;
+            padding: 12px 15px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="js-container"></div>
+
+<script src="https://unpkg.com/supersimpledev/react.js"></script>
+<script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+<script src="https://unpkg.com/supersimpledev/chatbot.js"></script>
+
+
+<script src="https://unpkg.com/supersimpledev/babel.js"></script>
+<script type="text/babel">
+
+    function CustomButton() {
+        const [isButtonOn, setButtonOn] = React.useState(true);
+
+        function switchButton() {
+            setButtonOn(!isButtonOn);
+        }
+
+        return (
+            <>
+                <button
+                    className={isButtonOn ? 'switch-button-on' : 'switch-button-off'}
+                    onClick={switchButton}
+                >
+                    {isButtonOn ? 'ON' : 'OFF'}
+                </button>
+            </>
+        )
+    }
+
+    function App() {
+        return (
+            <>
+                <CustomButton></CustomButton>
+            </>
+        )
+    }
+
+    const container = document.querySelector('.js-container');
+    ReactDOM.createRoot(container).render(
+        <App/>
+    );
+</script>
+</body>
+
+</html>
