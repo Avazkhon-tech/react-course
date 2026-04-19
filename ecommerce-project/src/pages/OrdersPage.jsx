@@ -2,7 +2,7 @@ import './header.css';
 import './OrdersPage.css';
 
 export function OrdersPage() {
-    return <>
+    return (<>
         <title>Orders</title>
 
         <div className="header">
@@ -173,4 +173,5 @@ export function OrdersPage() {
             </div>
         </div>
     </>
+    );
 }
