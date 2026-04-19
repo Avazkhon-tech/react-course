@@ -5,28 +5,15 @@ import './App.css'
 
 
 function App() {
-    const [chatMessages, setChatMessages] = React.useState([
-        {
-            id: crypto.randomUUID(),
-            message: "Hello, ChatBot!",
-            sender: "user"
-        },
-        {
-            id: crypto.randomUUID(),
-            message: "Hello! How can I help you?",
-            sender: "robot"
-        },
-        {
-            id: crypto.randomUUID(),
-            message: "can you get me todays date?",
-            sender: "user"
-        },
-        {
-            id: crypto.randomUUID(),
-            message: "Today is April 11",
-            sender: "robot"
-        }
-    ]);
+    const [chatMessages, setChatMessages] = React.useState( () =>
+        localStorage.getItem('chatMessages')
+            ? JSON.parse(localStorage.getItem('chatMessages'))
+            : []
+    );
+
+    React.useEffect(() => {
+        localStorage.setItem('chatMessages', JSON.stringify(chatMessages))
+    }, [chatMessages])
 
     return (
         <div className="app-container">

@@ -21,12 +21,14 @@ export function ChatInput({chatMessages, setChatMessages}) {
             id: crypto.randomUUID(),
             message: inputText,
             sender: "user",
+            time: Date.now()
         };
 
         const loadingMessage = {
             id: crypto.randomUUID(),
             message: 'loading',
             sender: "robot",
+            time: Date.now()
         };
 
         setInputText('');
@@ -40,6 +42,7 @@ export function ChatInput({chatMessages, setChatMessages}) {
             id: crypto.randomUUID(),
             message: response,
             sender: "robot",
+            time: Date.now()
         };
 
         setChatMessages(prev => [
@@ -62,6 +65,10 @@ export function ChatInput({chatMessages, setChatMessages}) {
         setInputText('')
     }
 
+    function handleClear() {
+        setChatMessages([])
+    }
+
     return (
         <div className="chat-input-container">
             <input
@@ -76,6 +83,12 @@ export function ChatInput({chatMessages, setChatMessages}) {
                 onClick={sendMessage}
                 className="send-button"
             >Send
+            </button>
+
+            <button
+                onClick={handleClear}
+                className="clear-button"
+            >Clear
             </button>
         </div>
     );
