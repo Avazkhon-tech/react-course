@@ -6,6 +6,7 @@ import {CheckoutHeader} from "./checkout/CheckoutHeader.jsx";
 export function CheckoutPage() {
     return (
         <>
+            <link rel="icon" type="image/svg+xml" href="/checkout-favicon.png"/>
             <title>Checkout</title>
             <CheckoutHeader/>
             <div className="checkout-page">

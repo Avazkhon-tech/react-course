@@ -1,0 +1,79 @@
+
+.not-found {
+    min-height: 100vh;
+    padding: 84px 20px 24px;
+    background: linear-gradient(180deg, rgb(242, 252, 245) 0%, rgb(255, 255, 255) 45%);
+    display: grid;
+    place-items: center;
+}
+
+.not-found-card {
+    width: min(560px, 100%);
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(222, 238, 227);
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(8, 79, 45, 0.08);
+    padding: 28px 24px 30px;
+}
+
+.not-found-code {
+    color: rgb(25, 135, 84);
+    font-size: 58px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.not-found-title {
+    font-size: 30px;
+    margin: 6px 0 10px;
+}
+
+.not-found-text {
+    margin: 0 auto;
+    max-width: 430px;
+    line-height: 1.5;
+    color: rgb(82, 82, 82);
+}
+
+.not-found-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.not-found-home {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0 16px;
+}
+
+.not-found-orders {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media (max-width: 480px) {
+    .not-found {
+        padding-top: 72px;
+    }
+
+    .not-found-card {
+        padding: 24px 18px 26px;
+    }
+
+    .not-found-code {
+        font-size: 48px;
+    }
+
+    .not-found-title {
+        font-size: 26px;
+    }
+}
