@@ -3,13 +3,15 @@ import CheckmarkIcon from "../assets/images/icons/checkmark.png";
 import '../components/Header.css';
 import {products} from '../../starting-code/data/products.js';
 import './HomePage.css';
+import axios from "axios";
 
 
 export function HomePage() {
-    fetch('http://localhost:3000/api/products')
-        .then((response) => {
-            return response.json();
-        });
+    axios.get('http://localhost:3000/api/products')
+        .then(response => {
+                console.log(response.data);
+            }
+        );
 
     return (
         <>
