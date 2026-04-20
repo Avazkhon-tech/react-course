@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e6691bd3-f8ce-4fc4-b802-f0809d879cb5" name="Changes" comment="Initialize project configuration files and update .gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce-project/src/pages/CheckoutPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce-project/src/pages/CheckoutPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ecommerce-project/src/pages/checkout/CheckoutHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce-project/src/pages/checkout/CheckoutHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecommerce-project/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce-project/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecommerce-project/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce-project/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ecommerce-project/src/pages/OrdersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../ecommerce-project/src/pages/OrdersPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecapSpentCounter">
+    <option name="endsOfQuotaMs" value="1779026442894" />
+    <option name="spentUsd" value="0.0051662996" />
+  </component>
+  <component name="RecapUselessUpdatesCounter">
+    <option name="suspendCountdown" value="8" />
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -76,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1776620568907</updated>
       <workItem from="1776620569930" duration="110000" />
-      <workItem from="1776703195671" duration="931000" />
+      <workItem from="1776703195671" duration="942000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project configuration files and update .gitignore">
       <option name="closed" value="true" />
